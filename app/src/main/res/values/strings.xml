@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Carrito</string>
+    <string name="cat_nombre">Nombre: </string>
+    <string name="guardar">Guardar</string>
+</resources>
