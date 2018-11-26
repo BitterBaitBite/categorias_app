@@ -1,6 +1,8 @@
 package tecno.impacto.carrito;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +24,11 @@ public class CategoryActivity extends AppCompatActivity {
 
         Intent i = new Intent(this, ListCategoryActivity.class);
         i.putExtra("nombreCat",categoria);
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor edit = preferences.edit(); edit.putString("cat", categoria); edit.commit();
+
+
 
         startActivity(i);
 
